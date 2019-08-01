@@ -8,16 +8,25 @@ import {
   Dimensions, 
   Platform,
   ScrollView } from 'react-native';
+import { AppLoading } from "expo";
 import ToDo from './ToDo';
 
 const { height, width } = Dimensions.get("window");
 
 export default class App extends React.Component{
   state = {
-    newToDo: ""
+    newToDo: "",
+    loadedToDOs: false
   }
+componentDidMount = () => {
+  this._loadToDos();
+}
+
   render() {
-    const { newToDo } = this.state;
+    const { newToDo, loadedToDOs } = this.state;
+    if(!loadedToDOs){
+        return <AppLoading />;
+    }
     return (
       <View style={styles.container}>
         <StatusBar barStyle="Light-cotent" />
@@ -31,9 +40,10 @@ export default class App extends React.Component{
             placeholderTextColor={"#999"}
             returnKeyType={"done"}
             autoCorrect={false} //자동수정
+            onSubmitEditing={this._addToDo}
           />
-          <ScrollView>
-            <ToDo />
+          <ScrollView contentContainerStyle={styles.toDos}>
+            <ToDo text={"TEST"} />
           </ScrollView>
         </View>
       </View>
@@ -42,9 +52,22 @@ export default class App extends React.Component{
     _controlNewToDo = text => {
       this.setState({
         newToDo: text
-      })
-    }
-  }
+      });
+    };
+    _loadToDos = () => {
+      this.setState({
+        loadedToDOs: true
+      });
+    };
+    _addToDo = () => {
+      const { newToDo } = this.state;
+      if(newToDo !== ""){
+        this.setState({
+          newToDo: ""
+        });
+      }
+    };
+}
   
 const styles = StyleSheet.create({
   container: {
@@ -85,5 +108,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#bbb",
     borderBottomWidth: 1,
     fontSize: 25
+  },
+  toDos: {
+    alignItems:"center"
   }
 });

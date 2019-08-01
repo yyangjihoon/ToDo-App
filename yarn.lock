@@ -4122,6 +4122,16 @@ react-native-branch@~3.0.1:
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-3.0.1.tgz#5b07b61cbd290168cd3c3662e017ebe0f356d2ca"
   integrity sha512-vbcYxPZlpF5f39GAEUF8kuGQqCNeD3E6zEdvtOq8oCGZunHXlWlKgAS6dgBKCvsHvXgHuMtpvs39VgOp8DaKig==
 
+react-native-elevated-view@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-elevated-view/-/react-native-elevated-view-0.0.6.tgz#560cc9ab16cfd5cb5ea821521558fc711e57e231"
+  integrity sha512-4Yna9tmdvzE7Ffl7IWut8/a2MBkb1s9S9jK0qfQZXMR9ZCeVQb0fZbzyYX9Sfaj1/3k+u7AlkEnl2ptCnQ/PbQ==
+
+react-native-touchable-safe@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-touchable-safe/-/react-native-touchable-safe-1.1.2.tgz#5b196c325e3e50ea155124d0294ba5be5f9a0729"
+  integrity sha512-qt2z2Y0GLaJOWEO0r5Mj92mSftZ2P3HQ32fgtE1jBY3zvSY5u9lCu82Y2F8NBp+YVjjodldUguaVwHjBKppUvA==
+
 react-native-view-shot@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-2.6.0.tgz#3b23675826f67658366352c4b97b59a6aded2f43"

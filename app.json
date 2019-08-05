@@ -16,7 +16,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F5A9E1"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -26,6 +26,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.todoapp.hoonyo"
     }
   }
 }

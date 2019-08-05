@@ -1,2 +1,2 @@
 # To Do App
-Practice App Project made with React Native
+Practice App Project made with React Native - Open Source

@@ -28,7 +28,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.todoapp.hoonyo"
+      "package": "com.hoonyo.todoapp"
     }
   }
 }
